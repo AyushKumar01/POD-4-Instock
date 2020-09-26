@@ -1,1 +1,1 @@
-# POD-4-Instock
+# POD-4-Instock A group (three people) project which is completed within one week
