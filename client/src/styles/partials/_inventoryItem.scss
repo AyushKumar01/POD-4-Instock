@@ -1,0 +1,337 @@
+.inventory-item{
+  margin-top: 1.7rem;
+  border-top: 1px solid $cloud;
+  padding: 15px;
+  display: flex;
+  @include flex-column;
+  &__mobile-row{
+    display: flex;
+  }
+  &__mobile-column{
+    @include flex-column;
+    width: 50%;
+    &--flex-full{
+      width: 100%;
+    }
+  }
+  &__title {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.594rem;
+    color: $slate;
+    margin-top: 1rem;
+  }
+  &__name-container {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__name {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.688rem;
+    color: $instock-indigo;
+  }
+  &__name-arrow {
+    height: 1rem;
+    margin-top: 0.12rem;
+  }
+  &__subtitle {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 0.688rem;
+    color: $instock-black;
+    width: 6.875rem;
+    &--stock {
+      font-family: "TitilliumWeb-Regular";
+      font-size: 0.688rem;
+      color: $instock-black;
+      width: 6.875rem;
+    }
+  }
+  &__subtitle-warehouse {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 0.688rem;
+    color: $instock-black;
+    width: 100%;
+    white-space: nowrap;
+  }
+  &__buttons {
+    @include flex-row;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  &__btn {
+    height: 1.3rem;
+  }
+}
+
+@include tablet {
+  .inventory-item {
+    padding: 0 3rem;
+    padding-bottom: 1.5rem;
+    border-top: none;
+    border-bottom: 1px solid $cloud;
+    flex-direction: row;
+    align-items: flex-end;
+    &__title{
+      display: none;
+    }
+    &__subtitle{
+      line-height: 25px;
+    }
+    &__buttons {
+      padding: 0;
+    }
+    &__btn{
+      margin-right: 10px;
+    }
+    &__mobile-row{
+      display: flex;
+      &--w20{
+        width: 15%;
+      }
+      &--w60{
+        width: 70%;
+      }
+    }
+    &__mobile-column{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      &--w50{
+        width: 50%;
+      }
+    }
+    &__flex{
+      &--w50{
+        width: 50%;
+      }
+    }
+    &:last-child{
+      border: none;
+    }
+  }
+}
+
+@include desktop {
+  .inventory-item {
+    padding: 0 3rem;
+    padding-bottom: 1.5rem;
+    border-top: none;
+    border-bottom: 1px solid $cloud;
+    flex-direction: row;
+    &__title{
+      display: none;
+    }
+    &__subtitle{
+      line-height: 25px;
+    }
+    &__buttons {
+      padding: 0;
+    }
+    &__btn{
+      margin-right: 10px;
+    }
+    &__mobile-row{
+      display: flex;
+      &--w20{
+        width: 15%;
+      }
+      &--w60{
+        width: 70%;
+      }
+    }
+    &__mobile-column{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      &--w50{
+        width: 50%;
+      }
+    }
+    &__flex{
+      &--w50{
+        width: 50%;
+      }
+    }
+    &:last-child{
+      border: none;
+    }
+  }
+}
+
+
+// .inventory-item {
+//   margin-top: 1.7rem;
+//   border-top: 1px solid $cloud;
+//   // display: flex;
+//   &__flex{
+//     width: 20%;
+//   }
+//   &__container {
+//     @include flex-row;
+//     justify-content: space-between;
+//     margin-bottom: 1rem;
+//     padding: 0 1rem;
+//   }
+//   &__subcontainer {
+//     @include flex-column;
+//   }
+//   &__title {
+//     font-family: "TitilliumWeb-SemiBold";
+//     font-size: 0.594rem;
+//     color: $slate;
+//     margin-top: 1rem;
+//   }
+//   &__name-container {
+//     @include flex-row;
+//     justify-content: flex-start;
+//     align-items: center;
+//   }
+//   &__name {
+//     font-family: "TitilliumWeb-SemiBold";
+//     font-size: 0.688rem;
+//     color: $instock-indigo;
+//   }
+//   &__name-arrow {
+//     height: 1rem;
+//     margin-top: 0.12rem;
+//   }
+//   &__subtitle {
+//     font-family: "TitilliumWeb-Regular";
+//     font-size: 0.688rem;
+//     color: $instock-black;
+//     width: 6.875rem;
+//     &--stock {
+//       font-family: "TitilliumWeb-Regular";
+//       font-size: 0.688rem;
+//       color: $instock-black;
+//       width: 6.875rem;
+//     }
+//     &--inStock {
+//       margin-left: 0px;
+//     }
+//     &--outStock {
+//       margin-left: 0px;
+//     }
+//   }
+//   &__subtitle-warehouse {
+//     font-family: "TitilliumWeb-Regular";
+//     font-size: 0.688rem;
+//     color: $instock-black;
+//     width: 100%;
+//     white-space: nowrap;
+//   }
+//   &__buttons {
+//     @include flex-row;
+//     justify-content: space-between;
+//     padding: 0 1rem;
+//   }
+//   &__btn {
+//     height: 1.3rem;
+//   }
+// }
+
+// @include tablet {
+//   .inventory-item {
+//     margin-top: 1rem;
+//     border-top: none;
+//     @include flex-row;
+//     justify-content: flex-start;
+//     align-items: center;
+//     padding-left: 2rem;
+//     padding-bottom: 1.5rem;
+//     border-bottom: 1px solid $cloud;
+
+//     &__container {
+//       @include flex-row;
+//       justify-content: flex-start;
+//       align-items: center;
+//       margin-bottom: 0;
+//       padding: 0;
+//     }
+//     &__subcontainer {
+//       @include flex-row;
+//       justify-content: flex-start;
+//       align-items: center;
+//     }
+
+//     &__info-block {
+//       margin-right: 3.6rem;
+//     }
+//     &__name-container {
+//       margin-right: 5rem;
+//     }
+//     &__name {
+//       font-size: 0.875rem;
+//     }
+//     &__info-category {
+//       margin-right: 3rem;
+//     }
+//     &__title {
+//       display: none;
+//     }
+//     &__subtitle {
+//       font-size: 0.813rem;
+//       width: 100%;
+//       &--stock {
+//         font-size: 0.813rem;
+//         width: 100%;
+//         white-space: nowrap;
+//       }
+//     }
+//     &__subtitle-warehouse {
+//       margin-left: 0.8rem;
+//     }
+//     &__buttons {
+//       padding: 0;
+//       // margin-left: 1rem;
+//       margin-right: 1rem;
+//     }
+//     &__btn {
+//       margin-left: 1rem;
+//     }
+//   }
+// }
+
+// @include desktop {
+//   .inventory-item {
+//     padding: 0 3rem;
+//     padding-bottom: 1.5rem;
+//     &__info-block {
+//       margin-right: 5rem;
+//     }
+//     &__name-container {
+//       margin-right: 8rem;
+//     }
+
+//     &__info-category {
+//       margin-right: 5rem;
+//     }
+//     &__name {
+//       font-size: 0.875rem;
+//     }
+//     &__subtitle {
+//       font-size: 0.813rem;
+
+//       margin-right: 2rem;
+//       width: 100%;
+//       white-space: nowrap;
+//       &--stock {
+//         font-size: 0.813rem;
+//         width: 12.5rem;
+//         margin-right: 1.1rem;
+//         width: 100%;
+//         white-space: nowrap;
+//       }
+//     }
+//     &__subtitle-warehouse {
+//       margin-left: 0;
+//     }
+//     &__buttons {
+//       padding: 0;
+//       margin-left: 1rem;
+//     }
+//     &__btn {
+//       margin-left: 1rem;
+//     }
+//   }
+// }

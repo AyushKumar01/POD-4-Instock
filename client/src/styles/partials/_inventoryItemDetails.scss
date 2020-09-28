@@ -1,0 +1,134 @@
+.inventory-details {
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  margin: 9rem 1rem;
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 90vw;
+
+  &__header {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  &__header-title {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 28px;
+    margin-left: 0.5rem;
+  }
+  &__header-subcontainer {
+    @include flex-row;
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+  &__back-icon {
+    margin-top: 0.8rem;
+  }
+  &__edit-icon {
+    margin-right: 1rem;
+  }
+  &__details-block {
+    @include flex-column;
+    border-top: 1px solid $cloud;
+  }
+  &__subcontainer {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  &__title {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.594rem;
+    color: $slate;
+    margin: 1rem 0 0.25rem 1rem;
+  }
+  &__subtitle {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 0.688rem;
+    color: $instock-black;
+    width: 6.875rem;
+    margin-left: 1rem;
+    &--description {
+      font-family: "TitilliumWeb-Regular";
+      font-size: 0.688rem;
+      color: $instock-black;
+      margin: 0 2rem 0 1rem;
+    }
+    &--inStock {
+      font-family: "TitilliumWeb-SemiBold";
+      font-size: 0.6rem;
+      color: $green;
+      background-color: rgba(21, 132, 99, 0.07);
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+    &--outStock {
+      font-family: "TitilliumWeb-SemiBold";
+      font-size: 0.6rem;
+      color: $red;
+      background-color: rgba(201, 69, 21, 0.07);
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__info-block {
+    margin-right: 2rem;
+  }
+}
+
+@include tablet {
+  .inventory-details {
+    margin: 9rem 2rem;
+    width: 92vw;
+    &__subcontainer {
+      justify-content: flex-start;
+      margin-bottom: 2rem;
+    }
+    &__title {
+      margin: 0 0 0 1rem;
+    }
+    &__subtitle {
+      margin-right: 0;
+      &--description {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__details-block {
+      @include flex-row;
+      padding-top: 2rem;
+      padding-left: 1rem;
+    }
+    &__main-block {
+      width: 45%;
+    }
+    &__secondary-block {
+      width: 45%;
+      margin-left: 2rem;
+      padding-left: 2rem;
+      border-left: 1px solid $cloud;
+    }
+    &__info-block {
+      margin-right: 4rem;
+    }
+  }
+}
+
+@include desktop {
+  .inventory-details {
+    margin: 9rem 10rem;
+    width: 74vw;
+    &__info-block {
+      margin-right: 10rem;
+    }
+  }
+}

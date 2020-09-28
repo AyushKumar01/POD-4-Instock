@@ -1,0 +1,87 @@
+.navbar {
+  background-color: $graphite;
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  width: 100%;
+  &__logo {
+    height: 1.8rem;
+    margin: 1.5rem 0;
+  }
+  &__bottom-container {
+    @include flex-row;
+    justify-content: space-evenly;
+    align-items: center;
+    // width: 320px;
+    margin-bottom: 4rem;
+  }
+
+  &__btn {
+    font-family: "TitilliumWeb-SemiBold";
+    color: $cloud;
+    background-color: $graphite;
+    font-size: 0.813rem;
+    height: 36px;
+    width: 140px;
+    border: none;
+    border-radius: 20px;
+    &--active {
+      font-family: "TitilliumWeb-SemiBold";
+      color: $white;
+      background-color: $instock-black;
+      font-size: 0.813rem;
+      height: 36px;
+      width: 140px;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+}
+
+@include tablet {
+  .navbar {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    height: 100px;
+    width: auto;
+    &__logo {
+      margin: 0;
+    }
+    &__bottom-container {
+      margin: 0;
+    }
+
+    &__btn {
+      width: auto;
+      margin-left: 2rem;
+      &--active {
+        width: 110px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .navbar {
+    padding: 2.5rem 10rem;
+
+    &__logo {
+      height: 2rem;
+    }
+    &__bottom-container {
+      margin-right: 0.5rem;
+    }
+
+    &__btn {
+      font-size: 1rem;
+      &--active {
+        width: 120px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

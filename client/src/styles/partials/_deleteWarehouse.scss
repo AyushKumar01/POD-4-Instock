@@ -1,0 +1,82 @@
+.delete-popup {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 99;
+  top: 10;
+  left: 5;
+  &__close {
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+  &__title {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 200px;
+    line-height: 1.5rem;
+  }
+  &__text {
+    color: $instock-black;
+    font-size: 11px;
+    margin: 0 1rem 20rem 1rem;
+  }
+  &__btn-container {
+    @include flex-row;
+    justify-content: space-evenly;
+    width: 280px;
+  }
+  &__cancel-button {
+    border: 1px solid $cloud;
+    font-size: 11px;
+    background-color: $white;
+    color: $slate;
+    border-radius: 20px;
+    width: 120px;
+    height: 1.7rem;
+  }
+  &__delete-button {
+    border: 1px solid $red;
+    font-size: 11px;
+    background-color: $red;
+    color: $white;
+    border-radius: 20px;
+    width: 120px;
+    height: 1.7rem;
+  }
+
+  //===========tablet==============
+
+  @include tablet {
+      top: 10rem;
+      left: 3rem;
+    &__text-container {
+      width: 79.5vw;
+      padding: 0 2rem;
+    }
+    &__text {
+      margin: 0 1rem 2rem 0;
+    }
+    &__title {
+      margin-left: 0;
+    }
+}
+
+  // ==============desktop============
+  @include desktop {
+    top: 10rem;
+    left: 20rem;
+    &__text-container {
+    width: 46.5vw;
+    }
+
+   }
+}
+
+

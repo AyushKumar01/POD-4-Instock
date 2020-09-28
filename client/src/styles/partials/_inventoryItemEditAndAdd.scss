@@ -1,0 +1,110 @@
+.edit-inventory {
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  margin: 9rem 1rem;
+  padding: 1.2rem 0;
+  padding-bottom: 0;
+  margin-bottom: 4rem;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 90vw;
+  &__header {
+    @include flex-row;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  &__header-title {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  &__info-block {
+    border-top: 1px solid $cloud;
+    margin-bottom: 1rem;
+  }
+  &__info-title {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  &__label {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 13px;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  &__radio-label {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 13px;
+    margin-left: 0.5rem;
+  }
+  &__radio-container {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem 1rem 1rem;
+  }
+  &__radio-subcontainer {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__input {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid $cloud;
+    width: 82%;
+    &--dropdown {
+      margin: 0 1rem 1rem 1rem;
+      padding: 0.5rem;
+      border-radius: 20px;
+      border: 1px solid $cloud;
+      width: 88%;
+    }
+  }
+
+  &__buttons {
+    @include flex-row;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: $light-grey;
+  }
+  &__btn-cancel {
+    font-family: "TitilliumWeb-SemiBold";
+    background-color: $white;
+    color: $slate;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid $cloud;
+    padding: 0.5rem 2.7rem;
+  }
+  &__btn-save {
+    font-family: "TitilliumWeb-SemiBold";
+    background-color: $instock-indigo;
+    color: $white;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 2.7rem;
+  }
+  &__btn-add {
+    font-family: "TitilliumWeb-SemiBold";
+    background-color: $instock-indigo;
+    color: $white;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+  &__btn-addItem {
+    font-family: "TitilliumWeb-SemiBold";
+    background-color: $instock-indigo;
+    color: $white;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 2rem;
+  }
+}

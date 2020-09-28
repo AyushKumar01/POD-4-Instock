@@ -1,0 +1,153 @@
+.warehouses-section {
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  margin: 9rem 1rem;
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.warehouses {
+  width: 90vw;
+  &__title {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 28px;
+    margin-bottom: 0.8rem;
+    margin-left: 1rem;
+  }
+  &__search-input {
+    font-family: "TitilliumWeb-Regular";
+    height: 2.2rem;
+    width: 75vw;
+    border-radius: 20px;
+    padding-left: 1rem;
+    border: 1px solid $cloud;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    outline: none;
+  }
+  &__btn {
+    font-family: "TitilliumWeb-Regular";
+    height: 2.2rem;
+    width: 80vw;
+    border-radius: 20px;
+    border: none;
+    background-color: $instock-indigo;
+    color: $white;
+    margin-left: 1rem;
+    outline: none;
+  }
+  &__title-block {
+    display: none;
+  }
+}
+
+@include tablet {
+  .warehouses-section {
+    margin: 6rem 2rem;
+  }
+
+  .warehouses {
+    width: 92vw;
+    &__header {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__title {
+      margin-left: 1.6rem;
+    }
+    &__subcontainer {
+      margin-right: 1.6rem;
+    }
+
+    &__search-input {
+      width: 10.5rem;
+      margin-left: 0;
+    }
+    &__btn {
+      width: 10.5rem;
+      margin-left: 1rem;
+    }
+    &__title-block {
+      display: block;
+      @include flex-row;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(247, 248, 249, 0.7);
+      height: 2rem;
+      padding: 0 2rem;
+    }
+    &__warehouse-block {
+      @include flex-row;
+      margin-right: 1rem;
+    }
+    &__single-block {
+      @include flex-row;
+      margin-right: 1rem;
+    }
+    &__address-block {
+      @include flex-row;
+      margin-right: 1.5rem;
+    }
+    &__title-warehouse {
+      color: $slate;
+      font-size: 0.688rem;
+    }
+    &__title-address {
+      color: $slate;
+      font-size: 0.688rem;
+    }
+    &__title-name {
+      color: $slate;
+      font-size: 0.688rem;
+      width: 100%;
+      white-space: nowrap;
+      justify-content: flex-end;
+    }
+    &__sort-icon {
+      height: 1rem;
+      margin-left: 0.5rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+@include desktop {
+  .warehouses-section {
+    margin: 6rem 10rem;
+    padding: 1.6rem 0;
+    width: 75vw;
+  }
+  .warehouses {
+    width: 98%;
+    &__title {
+      margin-left: 3rem;
+    }
+    &__subcontainer {
+      margin-right: 3rem;
+    }
+    &__title-block {
+      justify-content: flex-start;
+      padding: 0 3rem;
+    }
+    &__warehouse-block {
+      @include flex-row;
+      margin-right: 5.6rem;
+    }
+    &__address-block {
+      @include flex-row;
+      margin-right: 10.2rem;
+    }
+    &__single-block {
+      margin-right: 4.3rem;
+    }
+    &__title-name {
+      width: 100%;
+      white-space: nowrap;
+      justify-content: flex-end;
+    }
+  }
+}

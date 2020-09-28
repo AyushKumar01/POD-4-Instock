@@ -1,0 +1,142 @@
+.warehouse {
+  margin-top: 1.7rem;
+  border-top: 1px solid $cloud;
+  &__container {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  &__subcontainer {
+    @include flex-column;
+  }
+
+  &__title {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.594rem;
+    color: $slate;
+    margin-top: 1rem;
+  }
+  &__name-container {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100px;
+  }
+  &__name {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.688rem;
+    color: $instock-indigo;
+  }
+  &__name-arrow {
+    height: 1rem;
+    margin-top: 0.12rem;
+  }
+  &__subtitle {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 0.688rem;
+    color: $instock-black;
+    width: 6.875rem;
+    &--address {
+      font-family: "TitilliumWeb-Regular";
+      font-size: 0.688rem;
+      color: $instock-black;
+      width: 6.875rem;
+    }
+  }
+  &__buttons {
+    @include flex-row;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  &__btn {
+    height: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+@include tablet {
+  .warehouse {
+    margin-top: 1rem;
+    border-top: none;
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $cloud;
+
+    &__container {
+      @include flex-row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    &__subcontainer {
+      @include flex-row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__title {
+      display: none;
+    }
+    &__info-block {
+      margin-right: 1.6rem;
+    }
+    &__name-container {
+      margin-right: 0.6rem;
+    }
+    &__name {
+      font-size: 0.875rem;
+    }
+    &__subtitle {
+      font-size: 0.813rem;
+      width: 7.5rem;
+      &--address {
+        font-size: 0.813rem;
+        width: 6.25rem;
+      }
+    }
+    &__buttons {
+      padding: 0;
+      margin-left: 1rem;
+    }
+    &__btn {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@include desktop {
+  .warehouse {
+    padding: 0 3rem;
+    padding-bottom: 1.5rem;
+    &__info-block {
+      margin-right: 3rem;
+    }
+    &__name-container {
+      margin-right: 3.8rem;
+    }
+    &__name {
+      font-size: 0.875rem;
+    }
+    &__subtitle {
+      font-size: 0.813rem;
+      width: 7.5rem;
+      margin-right: 2rem;
+      &--address {
+        font-size: 0.813rem;
+        width: 12.5rem;
+        margin-right: 1.1rem;
+      }
+    }
+    &__buttons {
+      padding: 0;
+      margin-left: 1rem;
+    }
+    &__btn {
+      margin-left: 1rem;
+    }
+  }
+}

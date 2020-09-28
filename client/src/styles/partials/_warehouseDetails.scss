@@ -1,0 +1,80 @@
+.warehouse-details {
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  margin: 9rem 1rem;
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 90vw;
+
+  &__header {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+  &__header-title {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 28px;
+    margin-left: 0.5rem;
+  }
+  &__header-subcontainer {
+    @include flex-row;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    align-items: baseline;
+  }
+  &__edit-icon {
+    margin-right: 1rem;
+    
+  }
+  &__contact-info {
+    @include flex-column;
+    border-top: 1px solid $cloud;
+  }
+  &__subcontainer {
+    @include flex-row;
+  }
+  &__title {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 0.594rem;
+    color: $slate;
+    margin: 1rem 0 0.25rem 1rem;
+  }
+  &__subtitle {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 0.688rem;
+    color: $instock-black;
+    width: 6.875rem;
+    margin-left: 1rem;
+  }
+  &__info-block {
+    margin-right: 0.5rem;
+  }
+
+// ==============tablet=======
+  @include tablet {
+
+    &__contact-info {
+      display: flex;
+      flex-direction: row;
+      border-top: 1px solid $cloud;
+      margin: 0 2rem;
+    }
+    &__address-block {
+      flex-grow: 1;
+    }
+
+    &__subcontainer {
+      flex-grow: 2;
+      margin-left: 3.5rem;
+      
+
+    }
+    &__info-block {
+      margin-right: 1.5rem;
+    }
+  }
+}

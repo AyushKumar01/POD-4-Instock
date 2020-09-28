@@ -1,0 +1,58 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/fonts";
+@import "./partials/navbar";
+@import "./partials/warehouses";
+@import "./partials/warehouseItem";
+@import "./partials/deleteWarehouse";
+@import "./partials/warehouseDetails";
+@import "./partials/inventory";
+@import "./partials/inventoryItem";
+@import "./partials/warehouseEditAndAdd";
+@import "./partials/inventoryItemDetails";
+@import "./partials/inventoryItemEditAndAdd";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "TitilliumWeb-Regular";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: $light-grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  height: 3rem;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  padding-bottom: 1rem;
+  &__title {
+    font-size: 11px;
+    color: $slate;
+    margin-top: 2rem;
+  }
+}
+
+@include tablet {
+  .footer {
+    left: 40%;
+  }
+}
+
+@include desktop {
+  .footer {
+    left: 42%;
+  }
+}
